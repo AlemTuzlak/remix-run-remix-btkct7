@@ -1,13 +1,13 @@
-import { unstable_vitePlugin as remix } from '@remix-run/dev';
-import { defineConfig } from 'vite';
-import tsconfigPaths from 'vite-tsconfig-paths';
-import { createRoutesFromFolders } from '@remix-run/v1-route-convention';
-import mdx from '@mdx-js/rollup';
-import { remixDevTools } from 'remix-development-tools/vite';
+import { unstable_vitePlugin as remix } from "@remix-run/dev";
+import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
+import { createRoutesFromFolders } from "@remix-run/v1-route-convention";
+import mdx from "@mdx-js/rollup";
+import { remixDevTools } from "remix-development-tools/vite";
 const ignoredRoutePatterns = [
-  '**/.*',
-  '**/components/**',
-  '**/integration/*.test.*',
+  "**/.*",
+  "**/components/**",
+  "**/integration/*.test.*",
 ];
 
 export default defineConfig({
@@ -25,4 +25,7 @@ export default defineConfig({
     mdx(),
     tsconfigPaths(),
   ],
+  server: {
+    open: true,
+  },
 });

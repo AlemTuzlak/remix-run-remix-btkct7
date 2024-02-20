@@ -1,38 +1,20 @@
-# Welcome to Remix!
+# Steps to reproduce
 
-- [Remix Docs](https://remix.run/docs)
-
-## Development
-
-From your terminal:
-
-```sh
+1. Clone the repository
+2. Run the following commands
+```bash
+npm install
 npm run dev
 ```
+Has to be on windows, because the issue is not reproducible on linux.
 
-This starts your app in development mode, rebuilding assets on file changes.
+# Expected behavior
 
-## Deployment
+The application should start without any errors.
 
-First, build your app for production:
+# Actual behavior
 
-```sh
-npm run build
+The application fails to start with the following error:
+```bash 
+[vite] Pre-transform error: Server-only module referenced by client
 ```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
